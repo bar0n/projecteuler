@@ -11,7 +11,7 @@ object LargestPalindromeProduct {
     def inner(s: String): Boolean =
       (s.length <= 1) || (s.head == s.last) && inner(s.tail.init)
 
-    (s.size >= 2) && inner(s)
+    (s.length >= 2) && inner(s)
   }
 
   def isPalindrom(num: Int): Boolean =  isPalindromeRec(num.toString)

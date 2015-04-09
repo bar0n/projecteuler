@@ -1,7 +1,5 @@
-import org.joda.time.DateTime
 
-import scala.collection.immutable.{TreeMap, IndexedSeq}
-import scala.collection.mutable
+import scala.collection.immutable.TreeMap
 import scala.collection.mutable.HashMap
 
 /**
@@ -134,12 +132,12 @@ object pr_014_LongestCollatzSequence {
     println(collazt3(837799))*/
 
     val seq = 1000000 to 13 by -1
-    println(new DateTime())
+    //println(new DateTime())
     TreeMap((seq zip seq.map(collaztNew)).toSeq: _*)
     val mx = mapMy.values.max
     println(mx)
     val filter = mapMy.find({ case (k, v) => v == mx})
-    println(new DateTime())
+    //println(new DateTime())
     println(filter)
 
   }
